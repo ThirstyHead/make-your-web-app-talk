@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Speaker Notes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,
+                                   initial-scale=1,
+                                   user-scalable=yes">
+    <meta name="name" content="Scott Davis <scott@thirstyhead.com">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <style>
+      h1{
+        margin-bottom: 0;
+      }
+
+      .slideNumber{
+        font-size: 1.5em;
+        font-weight: bold;
+        font-style: italic;
+        margin-bottom: 1em;
+      }
+    </style>
+
+    <script>
+    window.addEventListener('load', populatePage);
+    window.addEventListener('storage', populatePage);
+
+    function populatePage(){
+      let currentSlide = JSON.parse(window.localStorage.getItem('currentSlide'));
+      let h1 = document.querySelector('h1');
+      h1.innerText = currentSlide.title;
+
+      let slideNumber = document.querySelector('.slideNumber');
+      let slideCount = window.localStorage.getItem('slideCount');
+      slideNumber.innerHTML = `${currentSlide.id} of ${slideCount}`;
+
+      let main = document.querySelector('main');
+      main.innerHTML = currentSlide.notes;
+    }
+
+    </script>
+  </head>
+  <body>
+    <h1>Speaker Notes</h1>
+    <div class="slideNumber"></div>
+    <main></main>
+  </body>
+</html>

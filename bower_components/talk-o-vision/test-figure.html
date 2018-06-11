@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test figure</title>
+
+  <style media="screen">
+    html {
+      box-sizing: border-box;
+      text-align: center;
+      font-size: 1.75em;
+      margin: 0;
+      padding: 0;
+    }
+
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
+    code{
+      text-align: left;
+      display: inline-block;
+      padding: 0.5rem;
+      background-color: white;
+      color: black;
+      font-family: monospace;
+      overflow: scroll;
+    }
+
+    figure{
+      display: flex;
+      /* flex-flow: row wrap; */
+      justify-content: center;
+      align-items: stretch;
+    }
+
+    p, ul, ol, code, .img-wrapper{
+      flex-grow: 1;
+      flex-basis: 50%;
+    }
+
+    p{
+      background-color: yellow;
+      margin-top: 0;
+    }
+
+    figcaption{
+      flex-grow: 1;
+      flex-basis: 50%;
+      background-color: green;
+      display: none;
+    }
+
+    figcaption p{
+      background-color: pink;
+    }
+
+    img{
+      max-height: 100%;
+    }
+
+    .size-wrapper{
+      height: 100vh;
+    }
+
+
+
+    section{
+      height: 100vh;
+      width: 100vw;
+    }
+
+    #toggleComments{
+      position: sticky;
+      top: 0;
+
+    }
+
+    .gray{
+      background-color: gray;
+    }
+
+
+  </style>
+
+  <script type="text/javascript">
+    function toggleDisplay(){
+      let list = document.querySelectorAll('figcaption');
+      for(let i=0; i < list.length; i++){
+        if(list[i].style.display === 'none'){
+          list[i].style.display = 'block';
+        }else{
+          list[i].style.display = 'none';
+        }
+      }
+    }
+  </script>
+
+</head>
+
+  <body>
+
+    <button id="toggleComments" onclick="toggleDisplay()">Toggle Comments</button>
+
+    <section class="gray">
+      <h2>Slide Title</h2>
+      <figure>
+        <p>This is my content. It is very long content. I am seeing if I will wrap correctly, which is my sincere hope.</p>
+        <figcaption>This is a description of my content.</figcaption>
+      </figure>
+    </section>
+
+
+    <section>
+      <h2>Another Slide Title</h2>
+      <figure>
+        <p>Here is some more content. It is very long content. I am seeing if I will wrap correctly, which is my sincere hope.</p>
+        <figcaption>This is another description of my content.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>A Slide with Lists</h2>
+      <figure>
+        <ul>
+          <li>This</li>
+          <li>is</li>
+          <li>a</li>
+          <li>list</li>
+        </ul>
+        <figcaption>This is another description of my content.</figcaption>
+      </figure>
+    </section>
+
+    <section class="gray">
+      <h2>Here's a code example</h2>
+      <figure>
+        <div class="size-wrapper">
+        <pre><code>
+let message = "JavaScript is cool!";
+String.prototype.shout = function(){
+return this.toUpperCase();
+}
+console.log(message.shout());
+        </code></pre>
+      </div>
+        <figcaption>
+          To display a code snippet, wrap it in a set of <span class="highlight">&lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</span> elements.
+        </figcaption>
+      </figure>
+    </section>
+
+
+    <section>
+      <h2>Here's an image</h2>
+      <figure>
+        <div class="size-wrapper">
+          <img src="slides/shoes/img/shoes.jpg"
+               alt="shoes"
+               data-original-url="https://morguefile.com/p/23395"
+               >
+        </div>
+
+        <figcaption>
+         <p>You can add an image by using the <span class="highlight">&lt;img&gt;</span> element. Don't forget to add an alternate text description using the <span class="highlight">alt</span> attribute -- your sight-impaired audience using a screen reader will appreciate it.</p>
+
+         <p>I recommend using 1024x768 sized images, but talk-o-vision does its best to right-size the images.</p>
+
+         <p>I recommend citing the original source of the image with a <span class="highlight">data-original</span> attribute.</p>
+        </figcaption>
+      </figure>
+    </section>
+
+
+    <section class="gray">
+      <h2 hidden aria-hidden="false">Here's an image</h2>
+      <figure>
+        <div class="size-wrapper">
+          <img src="slides/shoes/img/shoes.jpg"
+               alt="shoes"
+               data-original-url="https://morguefile.com/p/23395"
+               >
+        </div>
+
+        <figcaption>
+         <p>You can add an image by using the <span class="highlight">&lt;img&gt;</span> element. Don't forget to add an alternate text description using the <span class="highlight">alt</span> attribute -- your sight-impaired audience using a screen reader will appreciate it.</p>
+
+         <p>I recommend using 1024x768 sized images, but talk-o-vision does its best to right-size the images.</p>
+
+         <p>I recommend citing the original source of the image with a <span class="highlight">data-original</span> attribute.</p>
+        </figcaption>
+      </figure>
+    </section>
+
+  </body>
+</html>

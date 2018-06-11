@@ -1,0 +1,19 @@
+{
+  "name": "make-your-web-app-talk",
+  "version": "0.1.0",
+  "description": "[TRAINING] Make Your Web App Talk",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThirstyHead/make-your-web-app-talk.git"
+  },
+  "author": "Scott Davis <scott@thirstyhead.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ThirstyHead/make-your-web-app-talk/issues"
+  },
+  "homepage": "https://github.com/ThirstyHead/make-your-web-app-talk#readme"
+}

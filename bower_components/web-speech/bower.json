@@ -1,0 +1,17 @@
+{
+  "name": "web-speech",
+  "homepage": "https://github.com/ThirstyHead/web-speech",
+  "authors": [
+    "Scott Davis <scott@thirstyhead.com>"
+  ],
+  "description": "Sample apps exploring the W3C Web Speech API",
+  "main": "index.html",
+  "license": "cc-by-4.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Talk-o-Vision Demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,
+                                   initial-scale=1,
+                                   user-scalable=yes">
+
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="talk-o-vision.css">
+    <style>
+      .title-slide{
+        background: url('slides/title/img/BlooShooes.jpg') no-repeat center center;
+        background-size: contain;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="slideshow">
+
+      <section class="title-slide">
+        <h2 hidden aria-hidden="false">Talk-o-Vision</h2>
+        <figure>
+          <div class="banner">
+            <h1>Talk-o-Vision</h1>
+            <h2>HTML5-based Slides</h2>
+            <div class="banner-bio">
+              Scott Davis <br>
+              <a href="mailto:sdavis@thoughtworks.com">sdavis@thoughtworks.com</a> <br>
+              <a href="https://twitter.com/scottdavis99?lang=en">@scottdavis99</a>
+            </div>
+          </div>
+        </figure>
+      </section>
+
+      <section>
+        <h2>Keyboard Shortcuts</h2>
+        <figure>
+          <table>
+            <caption>Talk-o-Vision Keyboard Shortcuts</caption>
+            <thead>
+              <tr>
+                <th scope="col">Key</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td scope="row"><span class="highlight">&prec;</span> <span class="highlight">&succ;</span></td>
+                <td>Previous, Next slide</td>
+              </tr>
+
+
+              <tr>
+                <td scope="row"><span class="highlight">f</span></td>
+                <td>Enter <span class="highlight">fullscreen</span> mode</td>
+              </tr>
+
+              <tr>
+                <td scope="row"><span class="highlight">[esc]</span></td>
+                <td>Exit <span class="highlight">fullscreen</span> mode</td>
+              </tr>
+
+              <tr>
+                <td scope="row"><span class="highlight">h</span></td>
+                <td>Go to the <span class="highlight">home</span> slide (first slide)</td>
+              </tr>
+
+              <tr>
+                <td scope="row"><span class="highlight">n</span></td>
+                <td>Toggles speaker <span class="highlight">notes</span> on / off</td>
+              </tr>
+
+              <!-- <tr>
+                <td scope="row"><span class="highlight">t</span></td>
+                <td>Toggles <span class="highlight">table of contents</span> on / off</td>
+              </tr> -->
+            </tbody>
+          </table>
+
+          <figcaption>
+            <p>If you can see me, you are viewing the notes.</p>
+            <p>Talk-o-Vision offers some simple keyboard shortcuts for slide navigation and displaying additional information.</p>
+            <p>To toggle notes on / off, press <span class="highlight">n</span>.</p>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="theme-invert">
+        <h2 hidden aria-hidden="false">Biography</h2>
+        <figure class="full-height">
+          <img src="slides/bio/img/scott-davis-bio.png"
+               alt="Scott Davis' Biography">
+
+          <figcaption>
+           <p>Hi! My name is Scott Davis. I'm currently a Principle Engineer with ThoughtWorks. Before that, I ran a software consultancy out of Denver  called ThirstyHead. </p>
+
+           <p>I've been writing about web development for years -- articles for IBM, books for O'Reilly and the Pragmatic Bookshelf, and most recently videos for O'Reilly as well.</p>
+          </figcaption>
+        </figure>
+      </section>
+
+
+
+
+
+
+
+      <section class="section-title">
+        <h2>Basic slide examples</h2>
+      </section>
+
+      <section>
+        <h2>Text Examples</h2>
+        <figure>
+          <ul>
+            <li>We'll cover this</li>
+            <li>and this</li>
+            <li>and this other thing, too</li>
+          </ul>
+
+          <ol>
+            <li>We'll do this first</li>
+            <li>next, this</li>
+            <li>and finally, this other thing, too</li>
+          </ol>
+
+          <p>You can display information using <span class="highlight">&lt;ul&gt;</span> for bulleted ("unordered") lists, <span class="highlight">&lt;ol&gt;</span> for ordered lists, and <span class="highlight">&lt;p&gt;</span> for plain-old paragraphs.</p>
+
+          <figcaption>
+            <p>Notes describing a text slide</p>
+          </figcaption>
+        </figure>
+      </section>
+
+
+
+      <section>
+        <h2>Code Example</h2>
+        <figure>
+          <pre><code>
+let message = "JavaScript is cool!";
+String.prototype.shout = function(){
+  return this.toUpperCase();
+}
+console.log(message.shout());
+          </code></pre>
+
+          <p>To display a code snippet, wrap it in a set of <span class="highlight">&lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</span> elements.</p>
+
+          <figcaption>
+            <p>Notes on code slides</p>
+          </figcaption>
+        </figure>
+      </section>
+
+
+
+      <section>
+        <h2>Table Example</h2>
+        <figure>
+          <table>
+            <caption>Engines in Popular Web Browsers</caption>
+            <thead>
+              <tr>
+                <th scope="col">Browser</th>
+                <th scope="col">Vendor</th>
+                <th scope="col"><a href="https://en.wikipedia.org/wiki/Comparison_of_web_browser_engines">Layout Engine</a></th>
+                <th scope="col"><a href="https://en.wikipedia.org/wiki/JavaScript_engine">Script Engine</a></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td scope="row">Chrome</td>
+                <td>Google</td>
+                <td><a href="https://en.wikipedia.org/wiki/Blink_(web_engine)">Blink</a></td>
+                <td><a href="https://en.wikipedia.org/wiki/Chrome_V8">V8</a></td>
+              </tr>
+              <tr>
+                <td scope="row">Firefox</td>
+                <td>Mozilla</td>
+                <td><a href="https://en.wikipedia.org/wiki/Gecko_(software)">Gecko</a></td>
+                <td><a href="https://en.wikipedia.org/wiki/SpiderMonkey">SpiderMonkey</a></td>
+              </tr>
+              <tr>
+                <td scope="row">Safari</td>
+                <td>Apple</td>
+                <td><a href="https://en.wikipedia.org/wiki/WebKit">WebKit</a></td>
+                <td><a href="https://en.wikipedia.org/wiki/WebKit#JavaScriptCore">JavaScriptCore (Nitro)</a></td>
+              </tr>
+              <tr>
+                <td scope="row">Edge</td>
+                <td>Microsoft</td>
+                <td><a href="https://en.wikipedia.org/wiki/EdgeHTML">EdgeHTML</a></td>
+                <td><a href="https://en.wikipedia.org/wiki/Chakra_(JavaScript_engine)">Chakra</a></td>
+              </tr>
+              <tr>
+                <td scope="row">Opera</td>
+                <td>Opera</td>
+                <td><a href="https://en.wikipedia.org/wiki/Blink_(web_engine)">Blink</a></td>
+                <td><a href="https://en.wikipedia.org/wiki/Chrome_V8">V8</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+      </section>
+
+
+
+
+      <section>
+        <h2>Highlighted Text</h2>
+        <figure>
+          <p>To highlight text, wrap the text in <span class="highlight">&lt;span class="highlight"&gt;</span>.</p>
+
+          <p>Use this <span class="highlight">sparingly</span>, of course...</p>
+        </figure>
+      </section>
+
+
+
+      <section>
+        <h2>Header + Image</h2>
+        <figure>
+          <img src="slides/shoes/img/shoes.jpg"
+               alt="shoes"
+               data-src="https://morguefile.com/p/23395">
+
+          <figcaption>
+           <p>You can add an image by using the <span class="highlight">&lt;img&gt;</span> element. Don't forget to add an alternate text description using the <span class="highlight">alt</span> attribute -- your sight-impaired audience using a screen reader will appreciate it.</p>
+
+           <p>I recommend using 1024x768 sized images, but talk-o-vision does its best to right-size the images.</p>
+
+           <p>I recommend citing the original source of the image with a <span class="highlight">data-original</span> attribute.</p>
+          </figcaption>
+        </figure>
+      </section>
+
+
+
+      <section>
+        <h2>Full-height Images</h2>
+        <figure>
+          <p>The next slide demonstrates a full-height image on a slide without a header.</p>
+
+          <p>Use <span class="highlight">&lt;figure class="full-height"&gt;</span> to ensure the figure fills the entire screen.</p>
+        </figure>
+      </section>
+
+
+
+      <section>
+        <h2 hidden aria-hidden="false">Image without Header</h2>
+        <figure class="full-height">
+          <img src="slides/shoes/img/shoes.jpg"
+               alt="shoes"
+               data-src="https://morguefile.com/p/23395">
+          <figcaption>
+          </figcaption>
+        </figure>
+      </section>
+
+
+
+
+      <section>
+        <h2>Side-by-side List Example</h2>
+        <figure class="side-by-side">
+          <div>
+            <ul>
+              <li>I'm</li>
+              <li>on</li>
+              <li>the</li>
+              <li class="highlight">left</li>
+            </ul>
+          </div>
+
+          <div>
+            <ol>
+              <li>I'm</li>
+              <li>on</li>
+              <li>the</li>
+              <li class="highlight">right</li>
+            </ol>
+          </div>
+
+          <figcaption>
+          </figcaption>
+        </figure>
+      </section>
+
+
+      <section>
+        <h2>Side-by-side Paragraph Example</h2>
+        <figure class="side-by-side">
+          <div>
+            I'm a paragraph on the left side. I'm a paragraph on the left side.
+            I'm a paragraph on the left side. I'm a paragraph on the left side.
+          </div>
+          <div>
+            I'm a paragraph on the right side. I'm a paragraph on the right side.
+            I'm a paragraph on the right side. I'm a paragraph on the right side.
+          </div>
+
+          <figcaption>
+          </figcaption>
+        </figure>
+      </section>
+
+
+      <section>
+        <h2>Side-by-side 3 wide</h2>
+        <figure class="side-by-side">
+          <div>
+            I'm a paragraph on the left side. I'm a paragraph on the left side.
+            I'm a paragraph on the left side. I'm a paragraph on the left side.
+          </div>
+
+          <div>
+            <ul>
+              <li>I'm</li>
+              <li>in</li>
+              <li>the</li>
+              <li class="highlight">middle</li>
+            </ul>
+          </div>
+
+          <div>
+            I'm a paragraph on the right side. I'm a paragraph on the right side.
+            I'm a paragraph on the right side. I'm a paragraph on the right side.
+          </div>
+
+          <figcaption>
+          </figcaption>
+        </figure>
+      </section>
+
+
+
+      <!-- <section>
+        <h2>Side-by-side images</h2>
+
+        <div class="side-by-side">
+          <div>
+            <img src="slides/title/img/BlooShooes.jpg"
+                 alt="Blue Shoes"
+                 class="slide-img"
+                 data-src="https://morguefile.com/p/936834">
+          </div>
+          <div>
+            <img src="slides/shoes/img/shoes2.jpg"
+                 alt="another pair of shoes"
+                 class="slide-img"
+                 data-src="https://morguefile.com/p/23398">
+          </div>
+        </div>
+      </section> -->
+
+
+
+
+
+
+
+
+
+
+
+      <section class="section-title">
+        <h2><span class="highlight">Inverted</span> slide examples</h2>
+      </section>
+
+      <section class="theme-invert">
+        <h2>How to invert slide colors</h2>
+        <figure>
+          <p>Add <span class="highlight">class="theme-invert"</span> to any slide to invert (reverse) the colors.</p>
+        </figure>
+      </section>
+
+      <section class="theme-invert">
+        <h2>Inverted Text Example</h2>
+        <figure>
+          <ul>
+            <li>We'll cover this</li>
+            <li>and this</li>
+            <li>and this other thing, too</li>
+          </ul>
+
+          <ol>
+            <li>We'll do this first</li>
+            <li>next, this</li>
+            <li>and finally, this other thing, too</li>
+          </ol>
+
+          <p>You can display information using <span class="highlight">&lt;ul&gt;</span> for bulleted ("unordered") lists, <span class="highlight">&lt;ol&gt;</span> for ordered lists, and <span class="highlight">&lt;p&gt;</span> for plain-old paragraphs.</p>
+
+          <figcaption>
+            <p>Notes describing a text slide</p>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="theme-invert">
+        <h2>Inverted Code Example</h2>
+        <figure>
+          <pre><code>
+let message = "JavaScript is cool!";
+String.prototype.shout = function(){
+  return this.toUpperCase();
+}
+console.log(message.shout());
+          </code></pre>
+
+          <p>To display a code snippet, wrap it in a set of <span class="highlight">&lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</span> elements.</p>
+
+          <figcaption>
+            <p>Notes on code slides</p>
+          </figcaption>
+        </figure>
+      </section>
+
+
+      <section class="theme-invert">
+        <h2>Inverted Table Example</h2>
+        <figure>
+          <table>
+            <caption>Engines in Popular Web Browsers</caption>
+            <thead>
+              <tr>
+                <th scope="col">Browser</th>
+                <th scope="col">Vendor</th>
+                <th scope="col"><a href="https://en.wikipedia.org/wiki/Comparison_of_web_browser_engines">Layout Engine</a></th>
+                <th scope="col"><a href="https://en.wikipedia.org/wiki/JavaScript_engine">Script Engine</a></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td scope="row">Chrome</td>
+                <td>Google</td>
+                <td><a href="https://en.wikipedia.org/wiki/Blink_(web_engine)">Blink</a></td>
+                <td><a href="https://en.wikipedia.org/wiki/Chrome_V8">V8</a></td>
+              </tr>
+              <tr>
+                <td scope="row">Firefox</td>
+                <td>Mozilla</td>
+                <td><a href="https://en.wikipedia.org/wiki/Gecko_(software)">Gecko</a></td>
+                <td><a href="https://en.wikipedia.org/wiki/SpiderMonkey">SpiderMonkey</a></td>
+              </tr>
+              <tr>
+                <td scope="row">Safari</td>
+                <td>Apple</td>
+                <td><a href="https://en.wikipedia.org/wiki/WebKit">WebKit</a></td>
+                <td><a href="https://en.wikipedia.org/wiki/WebKit#JavaScriptCore">JavaScriptCore (Nitro)</a></td>
+              </tr>
+              <tr>
+                <td scope="row">Edge</td>
+                <td>Microsoft</td>
+                <td><a href="https://en.wikipedia.org/wiki/EdgeHTML">EdgeHTML</a></td>
+                <td><a href="https://en.wikipedia.org/wiki/Chakra_(JavaScript_engine)">Chakra</a></td>
+              </tr>
+              <tr>
+                <td scope="row">Opera</td>
+                <td>Opera</td>
+                <td><a href="https://en.wikipedia.org/wiki/Blink_(web_engine)">Blink</a></td>
+                <td><a href="https://en.wikipedia.org/wiki/Chrome_V8">V8</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+      </section>
+
+
+      <section class="theme-invert">
+        <h2>Inverted Highlighted Text</h2>
+        <figure>
+          <p>To highlight text, wrap the text in <span class="highlight">&lt;span class="highlight"&gt;</span>.</p>
+
+          <p>Use this <span class="highlight">sparingly</span>, of course...</p>
+        </figure>
+      </section>
+
+
+
+
+      <section class="section-title">
+        <h2><span class="highlight">Fin</span></h2>
+      </section>
+    </main>
+
+    <script src="talk-o-vision.js" charset="utf-8"></script>
+  </body>
+</html>

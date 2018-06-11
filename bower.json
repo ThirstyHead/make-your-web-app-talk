@@ -1,0 +1,22 @@
+{
+  "name": "make-your-web-app-talk",
+  "description": "[TRAINING] Make Your Web App Talk",
+  "main": "index.html",
+  "authors": [
+    "Scott Davis <scott@thirstyhead.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/ThirstyHead/make-your-web-app-talk",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "web-speech-api": "mdn/web-speech-api",
+    "talk-o-vision": "thirstyhead/talk-o-vision#^0.5.0",
+    "web-speech": "thirstyhead/web-speech"
+  }
+}

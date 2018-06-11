@@ -1,0 +1,27 @@
+{
+  "name": "web-speech",
+  "homepage": "https://github.com/ThirstyHead/web-speech",
+  "authors": [
+    "Scott Davis <scott@thirstyhead.com>"
+  ],
+  "description": "Sample apps exploring the W3C Web Speech API",
+  "main": "index.html",
+  "license": "cc-by-4.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "c0776906e8",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "c0776906e83139281dc7ebeae1bbe665b3f630e7"
+  },
+  "_source": "https://github.com/thirstyhead/web-speech.git",
+  "_target": "*",
+  "_originalSource": "thirstyhead/web-speech",
+  "_direct": true
+}

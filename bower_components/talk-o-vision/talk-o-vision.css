@@ -1,0 +1,230 @@
+/**************************
+  Box-sizing
+  https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+***************************/
+html {
+  box-sizing: border-box;
+  background-color: var(--theme-background-color);
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/**************************
+  Theme
+***************************/
+:root{
+  --theme-background-color: black;
+  --theme-foreground-color: white;
+  --theme-highlight-color: yellow;
+  --theme-link-hover-color: red;
+  --theme-font-size: 2rem;
+}
+
+/**************************
+  Elements
+***************************/
+body{
+  background-color: var(--theme-background-color);
+  color: var(--theme-foreground-color);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: var(--theme-font-size);
+}
+
+code{
+  /* NOTE: background, foreground colors are inverted */
+  background-color: var(--theme-foreground-color);
+  color: var(--theme-background-color);
+  display: inline-block;
+  padding: 0.5rem;
+  font-family: monospace;
+  text-align: left;
+  overflow: scroll;
+}
+
+figcaption{
+  display: none;
+}
+
+h2 + figure{
+  height: 70vh;
+}
+
+figure img{
+  display: block;
+  max-height: 100%;
+  margin: 0 auto;
+}
+
+h2{
+  font-size: 3em;
+}
+
+p{
+  width: 80%;
+  padding-left: 20%;
+}
+
+section{
+  height: 100vh;
+  page-break-after: always;
+}
+
+table{
+  width: 75%;
+  padding-left: 25%;
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th{
+  text-align: left;
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+}
+
+td a, th a{
+  color: var(--theme-foreground-color);
+  text-decoration: none;
+}
+
+td a:after, th a:after{
+  content: " \1F517";
+}
+
+td a:hover, th a:hover{
+  color: var(--theme-link-hover-color);
+}
+
+th{
+  border-bottom: 2px solid var(--theme-foreground-color);
+}
+
+caption{
+  caption-side: bottom;
+  padding: 2em 1em 1em 1em;
+  text-align: right;
+  font-style: italic;
+}
+
+ul, ol{
+  width: 75%;
+  padding-left: 25%;
+  text-align: left;
+}
+
+ul li{
+  list-style: disc;
+  color: var(--theme-foreground-color);
+}
+
+
+/**************************
+  Custom Styles
+***************************/
+
+/****** title slide ******
+NOTE: This is typically included in a <style> in the index.html file,
+      since it is a part of the slideshow rather than a generic
+      element.
+.title-slide{
+  background: url('slides/title/img/cloud-1.jpg') no-repeat center center;
+  background-size: contain;
+}
+**************************/
+.banner {
+  background-color: var(--theme-background-color);
+  opacity: 0.7;
+  width: 100%;
+  text-align: left;
+  padding: 0.5em 10% 0.5em 10%;
+}
+
+.banner h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.banner h2 {
+  font-size: 1.5em;
+  font-style: italic;
+  margin: 0;
+}
+
+.banner-bio {
+  text-align: right;
+  padding-bottom: 1em;
+}
+
+.banner-bio a{
+  color: var(--theme-foreground-color);
+}
+/****** title slide ******/
+
+
+.section-title h2{
+  position: relative;
+  top: 50%;
+  transform: perspective(1px) translateY(-50%);
+}
+
+.highlight{
+  color: var(--theme-highlight-color);
+}
+
+.full-height{
+  height: 99vh;
+}
+
+.side-by-side{
+  display: flex;
+  width: 75%;
+  padding-left: 25%;
+}
+
+.side-by-side div{
+  flex-grow: 1;
+  margin: 1em;
+}
+
+.side-by-side div img{
+  display: block;
+  max-height: 100%;
+  margin: 0 auto;
+}
+
+.theme-invert{
+  background-color: var(--theme-foreground-color);
+  color: var(--theme-background-color);
+}
+
+.theme-invert li{
+  color: var(--theme-background-color);
+}
+
+.theme-invert code{
+  background-color: var(--theme-background-color);
+  color: var(--theme-foreground-color);
+}
+
+.theme-invert .highlight{
+  background-color: var(--theme-highlight-color);
+  color: var(--theme-background-color);
+}
+
+.theme-invert td a, .theme-invert th a{
+  color: var(--theme-background-color);
+}
+
+.theme-invert td a:hover, .theme-invert th a:hover{
+  color: var(--theme-link-hover-color);
+}
+
+.theme-invert th{
+  border-bottom: 2px solid var(--theme-background-color);
+}
