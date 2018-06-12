@@ -1,0 +1,14 @@
+<speak>
+  <p>
+    <s>
+      <lang xml:lang="us-EN">
+        For English, press <emphasis>one</emphasis>.
+      </lang>
+    </s>
+    <s>
+      <lang xml:lang="es-MX">
+        Para español, oprima el <emphasis>dos</emphasis>.
+      </lang>
+    </s>
+  </p>
+</speak>

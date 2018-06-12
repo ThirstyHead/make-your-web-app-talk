@@ -1,0 +1,7 @@
+<speak>
+  <p>You have 2 new messages from <prosody rate="66%">Jane Smith</prosody>.</p>
+
+  <p>Message 1: <prosody pitch="+20%">Do You Have Dinner Plans Tonight?</prosody>.</p>
+  <p>Message 2: <prosody pitch="-20%">Sorry, Flight Delayed. Maybe Tomorrow.</prosody>.</p>
+
+</speak>

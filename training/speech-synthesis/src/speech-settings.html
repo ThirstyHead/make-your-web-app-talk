@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Speech Settings</title>
+  </head>
+
+  <script type="text/javascript">
+    let voices = undefined;
+    let defaultVoice = undefined;
+
+    function rateHandler(){
+      let rateField = document.querySelector('#rate');
+      let rateOuput = document.querySelector('#rate-output');
+      rateOuput.innerText = rateField.valueAsNumber;
+      localStorage['speech-rate'] = rateField.valueAsNumber;
+    }
+
+    function pitchHandler(){
+      let pitchField = document.querySelector('#pitch');
+      let pitchOuput = document.querySelector('#pitch-output');
+      pitchOuput.innerText = pitchField.valueAsNumber;
+      localStorage['speech-pitch'] = pitchField.valueAsNumber;
+    }
+
+    function voiceHandler(){
+      let voiceField = document.querySelector('#voice');
+      let selected = voiceField.selectedOptions[0].attributes['data-name'].value;
+      localStorage['speech-voice'] = selected;
+    }
+
+    function loadSettings(){
+      let rateField = document.querySelector('#rate');
+      let rateValue = localStorage['speech-rate'] || 1;
+      rateField.value = rateValue;
+      let rateOuput = document.querySelector('#rate-output');
+      rateOuput.innerText = rateField.valueAsNumber;
+
+      let pitchField = document.querySelector('#pitch');
+      let pitchValue = localStorage['speech-pitch'] || 1;
+      pitchField.value = pitchValue;
+      let pitchOuput = document.querySelector('#pitch-output');
+      pitchOuput.innerText = pitchField.valueAsNumber;
+    }
+
+    function loadVoices(){
+      window.speechSynthesis.onvoiceschanged = function(){
+        voices = speechSynthesis.getVoices();
+        // console.dir(voices);
+
+        defaultVoice = voices.filter( (voice) => {
+          return voice.default === true;
+        })[0].name;
+
+        let voiceValue = localStorage['speech-voice'] || defaultVoice;
+
+        let voiceField = document.querySelector('#voice');
+        voiceField.innerHTML = '';
+        voices.forEach( (voice, i) => {
+          let option = document.createElement('option');
+          option.textContent = `${voice.name} (${voice.lang})`;
+          option.setAttribute('data-name', voice.name);
+          option.setAttribute('data-lang', voice.lang);
+          voiceField.add(option);
+
+          if(voice.name === voiceValue){
+            voiceField.selectedIndex = i;
+          }
+        })
+      }
+    }
+
+    function init(){
+      loadVoices();
+      loadSettings();
+
+      let rateField = document.querySelector('#rate');
+      rateField.onchange = rateHandler;
+
+      let pitchField = document.querySelector('#pitch');
+      pitchField.onchange = pitchHandler;
+
+      let voiceField = document.querySelector('#voice');
+      voiceField.onchange = voiceHandler;
+    }
+
+    window.onload = init;
+  </script>
+  <body>
+    <nav>[<a href="index.html">Home</a>]</nav>
+
+    <h1>Speech Settings</h1>
+
+    <form>
+      <fieldset>
+        <legend>Voice Settings</legend>
+
+        <p>
+          <!-- NOTE: valid range for rate is a float, [0.1 .. 10] -->
+          <label for="rate">Rate</label>
+          <input type="range"
+                 name="rate"
+                 id="rate"
+                 value="1"
+                 min="0.5"
+                 max="2.5"
+                 step="0.5">
+          <output name="rate-output"
+                  id="rate-output"
+                  for="rate">1</output>
+        </p>
+
+        <p>
+          <!-- NOTE: valid range for pitch is a float, [0 .. 2] -->
+          <label for="rate">Pitch</label>
+          <input type="range"
+                 name="pitch"
+                 id="pitch"
+                 value="1"
+                 min="0"
+                 max="2.0"
+                 step="0.5">
+          <output name="pitch-output"
+                  id="pitch-output"
+                  for="pitch">1</output>
+        </p>
+
+        <p>
+          <label for="voice">Voice</label>
+          <select name="voice" id="voice"></select>
+        </p>
+      </fieldset>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<speak>
+  <!-- Spelling out Acronyms -->
+  <p>I know HTML, CSS, and JavaScript.</p>
+  <!-- <p>I know ABC, DEF, and GHIJK.</p> -->
+  <!-- <p>I know <say-as interpret-as="spell-out">ABC</say-as>,
+            <say-as interpret-as="spell-out">DEF</say-as>, and
+            <say-as interpret-as="spell-out">GHIJK</say-as>.</p> -->
+
+  <!-- Speaking numbers -->
+  <!-- <p>There are 12345 of them.</p>
+  <p>There are <say-as interpret-as="cardinal">12345</say-as> of them.</p> -->
+  <!-- <p>I came in <say-as interpret-as="ordinal">2</say-as> place.</p> -->
+  <!-- <p>My area code is <say-as interpret-as="digits">303</say-as>.</p> -->
+  <!-- <p>Use <say-as interpret-as="fraction">3+1/2</say-as> cups of sugar.</p> -->
+  <!-- <p>My phone number is <say-as interpret-as="telephone">3035551212</say-as>.</p> -->
+
+  <!-- Speaking dates -->
+  <!-- <p>I moved in on <say-as interpret-as="date" format="mdy">1-15-2002</say-as>.</p> -->
+
+  <!-- Substitutions -->
+  <!-- <p>I live in Denver, <sub alias="Colorado">CO</sub>.</p> -->
+</speak>

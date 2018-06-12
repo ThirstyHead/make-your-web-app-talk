@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Let's Talk</title>
+    <style media="screen">
+      .speak{
+        background-color: yellow;
+      }
+
+      .description{
+        padding-left: 1em;
+        font-style: italic;
+      }
+    </style>
+
+    <script type="text/javascript">
+      let voices = undefined;
+
+      function say(message){
+        let utterance = new SpeechSynthesisUtterance(message);
+
+        let rateValue = localStorage['speech-rate'] || 1;
+        utterance.rate = rateValue;
+
+        let pitchValue = localStorage['speech-pitch'] || 1;
+        utterance.pitch = pitchValue;
+
+        let voiceValue = localStorage['speech-voice'];
+        let voice = voices.filter( (voice) => {
+          return voice.name === voiceValue;
+        })[0];
+        utterance.voice = voice;
+
+        window.speechSynthesis.speak(utterance);
+      }
+
+      function readDocument() {
+        let thingsToSay = document.querySelectorAll('.speak');
+        thingsToSay.forEach( it => {
+          say(it.innerText);
+        });
+      }
+
+      function init(){
+        window.speechSynthesis.onvoiceschanged = function(){
+          voices = speechSynthesis.getVoices();
+        }
+
+        let talkButton = document.querySelector('#talk-button');
+        talkButton.onclick = readDocument;
+      }
+
+      window.onload = init;
+    </script>
+
+  </head>
+  <body>
+    <nav>[<a href="speech-settings.html">Settings</a>]</nav>
+
+    <h1>Speech Synthesis</h1>
+
+    <button id="talk-button"
+            accesskey="t"><u>T</u>alk</button>
+    <p class="speak">Hey Alexa, Good Morning!</p>
+    <p class="description">Alexa will respond with an interesting factoid or a "today in history" story.</p>
+    <p class="speak">How's it going?</p>
+  </body>
+</html>
